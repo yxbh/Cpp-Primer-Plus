@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+static void func(int[], int, int);
+
+void ch7re3()
+{
+	std::cout << " - Chapter 7 Review 3 - " << std::endl << std::endl;
+
+
+	int arr[] = {12,32,32,34,1122,32,42};
+
+	cout << "Before calling func()..." << endl;
+	for (int i = 0; i < 7; i++)
+		cout << arr[i] << " ";
+
+	func(arr, 7, 12);
+
+	cout << endl << "After the call..." << endl;
+	for (int i = 0; i < 7; i++)
+		cout << arr[i] << " ";
+}
+
+static void func(int arr[], int arrSize, int val)
+{
+	for (int i = 0; i < arrSize; i++)
+		arr[i] = val;
+}

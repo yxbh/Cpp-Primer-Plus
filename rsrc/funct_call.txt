@@ -1,0 +1,79 @@
+	//ch6ex3();
+	//ch6ex4();
+	//ch6ex5();
+	//ch6ex6();
+	//ch6ex7();
+	//ch6ex8();
+	//ch6ex9();
+
+	//ch7ex1();
+	//ch7ex2();
+	//ch7ex3();
+	//ch7ex4();
+	//ch7ex5();
+	//ch7ex6();
+	//ch7ex7();
+	//ch7ex8a();
+	//ch7ex8b();
+	//ch7ex9();
+	//ch7ex10();
+
+	//ch7re8();
+	//ch7re9();
+	//ch7re11();
+	//ch7re12();
+	//ch7re13();
+
+	//ch8re2();
+	//ch8re3();
+	//ch8re4();
+	//ch8re7();
+	//ch8re8();
+	//ch8ex1();
+	//ch8ex2();
+	//ch8ex3();
+	//ch8ex4();
+	//ch8ex5();
+	//ch8ex6();
+	//ch8ex7();
+
+	//ch9re3();
+	//ch9re4();
+	//ch9re5();
+	//ch9ex1();
+	//ch9ex2();
+	//ch9ex3();
+	//ch9ex4();
+
+	//ch10ex1();
+	//ch10ex2();
+	//ch10ex3();
+	//ch10ex4();
+	//ch10ex5();
+	//ch10ex6();
+	//ch10ex7();
+	//ch10ex8();
+
+	//ch11re1();
+	//ch11re4();
+	//ch11re7();
+
+	//ch11ex1();
+	//ch11ex2();
+	//ch11ex3();
+	//ch11ex4();
+	//ch11ex5();
+	//ch11ex6();
+	//ch11ex7();
+
+	//ch12ex1();
+	//ch12ex2();
+	//ch12ex3();
+	//ch12ex4();
+	//ch12ex5();
+	//ch12ex6();
+
+	//ch13ex1();
+	//ch13ex2();
+	//ch13ex3();
+	//ch13ex4();
