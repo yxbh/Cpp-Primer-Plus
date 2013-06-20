@@ -4,10 +4,9 @@ bh_util
 Ben Huang utility/utilities
 
 author: YANXIANG (BEN) HUANG
-version: 20/12/2012   v0.0.6
+version: 22/12/2012   v0.0.7
 
 */
-
 #include "bh_util.h"
 #include <iostream>
 #include <string>
@@ -19,10 +18,11 @@ version: 20/12/2012   v0.0.6
 #include <cstring>
 
 
-namespace bh {namespace console_util
+namespace bh_lib {namespace console_util
 {
 	// FLAG
 	bool valid_choice_flag = true;
+
 
 	/*
 	prints error msg to cerr then calls EXIT_FAILURE.
@@ -34,6 +34,7 @@ namespace bh {namespace console_util
 		pbe();
 		exit(EXIT_FAILURE);
 	}
+
 
 	bool valid_choice(const char input, const std::string opt_list)
 	{
@@ -63,6 +64,7 @@ namespace bh {namespace console_util
 		return true;
 	}
 
+
 	void reset_valid_choice_flag(void)
 	{
 		valid_choice_flag = true;
@@ -75,7 +77,6 @@ namespace bh {namespace console_util
 	{
 		std::cin.ignore(INT_MAX, '\n'); // All char up to the next '\n' are ignored
 		std::cin.clear();
-		//std::cin.get();
 	}
 
 	/*
@@ -101,6 +102,7 @@ namespace bh {namespace console_util
 
 
 	// flush cin stream
+	// this is used in a cin >> non-string-variable situation
 	const std::string bh_flush_cin(std::istream & os)
 	{
 		if (!os) {
@@ -137,4 +139,54 @@ namespace bh {namespace console_util
 #endif
 	}
 
-}} // end of bh::console_util
+} // end of bh::console_util
+
+namespace util
+{
+	const std::string int_to_binary(int x)
+	{
+		std::string binary_str = "";
+		while (x > 0)
+		{
+			switch(x % 2)
+			{
+			case 0:
+				binary_str = '0' + binary_str;
+				break;
+			case 1:
+				binary_str = '1' + binary_str;
+				break;
+			}
+			x /= 2;
+		}
+		return binary_str;
+	}
+
+	const int binary_to_int(const string & str)
+	{
+		int return_val = 0;
+		unsigned step = 1;
+		unsigned len = str.size();
+		for (int i = len-1; i >= 0; i--)
+		{
+			switch(str[i])
+			{
+			case '0':
+				return_val += step * 0;
+				break;
+			case '1':
+				return_val += step * 1;
+				break;
+			}
+			step *= 2;
+		}
+		return return_val;
+	}
+
+
+
+
+} // end of bh_lib::util
+
+
+} 

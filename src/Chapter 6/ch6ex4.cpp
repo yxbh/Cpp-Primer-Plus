@@ -1,7 +1,8 @@
+#include "../bh_util.h"
 #include <iostream>
 #include <array>
 #include "chapter6_exercises.h"
-#include "bh_lib.h"
+//#include "bh_lib.h"
 using namespace std;
 using namespace bh_lib::console_util;
 

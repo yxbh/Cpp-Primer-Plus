@@ -1,7 +1,8 @@
+#include "../bh_util.h"
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "bh_lib.h"
+//#include "bh_lib.h"
 using namespace bh_lib::console_util;
 using namespace std;
 

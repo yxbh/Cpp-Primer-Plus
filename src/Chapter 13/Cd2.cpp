@@ -1,9 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Cd2.h"
+#include "../bh_util.h"
 #include <cstring>
 #include <iostream>
 #include <string>
-#include "bh_lib.h"
+//#include "bh_lib.h"
 using namespace bh_lib::util;
 using std::cout;
 using std::endl;
