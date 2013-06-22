@@ -22,6 +22,7 @@ public:
     void set_mode() {mode = (mode == Antenna)? Cable : Antenna;}
     void set_input() {input = (input == TV)? DVD : TV;}
     void settings() const; // display all settings
+	void toggleRemoveMode(Remote & p_remote);
 private:
     int state;             // on or off
     int volume;            // assumed to be digitized
@@ -29,13 +30,17 @@ private:
     int channel;           // current channel setting
     int mode;              // broadcast or cable
     int input;             // TV or DVD
+
 };
 
 class Remote
 {
 private:
     int mode;              // controls TV or DVD
+	enum class RemoteMode {Normal, Interactive};
+	RemoteMode m_RemoteMode;
 public:
+	friend class Tv;
     Remote(int m = Tv::TV) : mode(m) {}
     bool volup(Tv & t) { return t.volup();}
     bool voldown(Tv & t) { return t.voldown();}
@@ -45,5 +50,6 @@ public:
     void set_chan(Tv & t, int c) {t.channel = c;}
     void set_mode(Tv & t) {t.set_mode();}
     void set_input(Tv & t) {t.set_input();}
+	RemoteMode remote(void) {return m_RemoteMode;}
 };
 #endif

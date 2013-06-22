@@ -54,3 +54,19 @@ void Tv::settings() const
             << (input == TV? "TV" : "DVD") << endl;
     }
 }
+
+void Tv::toggleRemoveMode(Remote & p_remote)
+{
+	if (this->state == On)
+	{
+		switch(p_remote.m_RemoteMode)
+		{
+		case Remote::RemoteMode::Normal:
+			p_remote.m_RemoteMode = Remote::RemoteMode::Interactive;
+			break;
+		case Remote::RemoteMode::Interactive:
+			p_remote.m_RemoteMode = Remote::RemoteMode::Normal;
+		}
+	}
+}
+
