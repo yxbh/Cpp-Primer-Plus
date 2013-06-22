@@ -1,11 +1,11 @@
 //error4.cpp – using exception classes
+#include "exc_mean.h"
 #include <iostream>
 #include <cmath> // or math.h, unix users may need -lm flag
-#include "exc_mean.h"
 // function prototypes
 double hmean(double a, double b);
 double gmean(double a, double b);
-int main()
+int error4(void)
 {
     using std::cout;
     using std::cin;
@@ -24,23 +24,30 @@ int main()
                 << " is " << gmean(x,y) << endl;
             cout << "Enter next set of numbers <q to quit>: ";
         }// end of try block
-        catch (bad_hmean & bg)    // start of catch block
-        {
-            bg.mesg();
-            cout << "Try again.\n";
-            continue;
-        }                  
-        catch (bad_gmean & hg) 
-        {
-            cout << hg.mesg();
-            cout << "Values used: " << hg.v1 << ", " 
-                 << hg.v2 << endl;
-            cout << "Sorry, you don't get to play any more.\n";
-            break;
-        } // end of catch block
+		catch (base_exception & be)
+		{
+			std::cout << be.what() << std::endl;
+			std::cout << "Sorry, you don't get to play any more.\n" << std::endl;
+			break;
+		}
+
+        //catch (bad_hmean & bg)    // start of catch block
+        //{
+        //    bg.mesg();
+        //    cout << "Try again.\n";
+        //    continue;
+        //}                  
+        //catch (bad_gmean & hg) 
+        //{
+        //    cout << hg.mesg();
+        //    cout << "Values used: " << hg.v1 << ", " 
+        //         << hg.v2 << endl;
+        //    cout << "Sorry, you don't get to play any more.\n";
+        //    break;
+        //} // end of catch block
     }
     cout << "Bye!\n";
-    // cin.get();
+    cin.get();
     // cin.get();
     return 0;
 }

@@ -30,7 +30,6 @@ private:
     int channel;           // current channel setting
     int mode;              // broadcast or cable
     int input;             // TV or DVD
-
 };
 
 class Remote
