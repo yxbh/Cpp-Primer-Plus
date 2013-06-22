@@ -2,7 +2,7 @@
 #include <iostream>
 #include "sales.h"
 
-int main()
+int use_sales(void)
 {
     using std::cout;
     using std::cin;
@@ -46,7 +46,18 @@ int main()
         }
         cout << "End of try block 1.\n";
    }
-   catch(LabeledSales::nbad_index & bad)
+	catch(std::logic_error & ex)
+	{
+		cout << ex.what();
+		if (typeid(ex) == typeid(LabeledSales::nbad_index))
+		{
+			std::cout << "Company: " << dynamic_cast<LabeledSales::nbad_index&>(ex).label_val() << std::endl;
+			std::cout << "bad index: " << dynamic_cast<LabeledSales::nbad_index&>(ex).bi_val() << endl;
+		}
+		else
+			std::cout << "bad index: " << dynamic_cast<Sales::bad_index&>(ex).bi_val() << endl;
+	}
+   /*catch(LabeledSales::nbad_index & bad)
    {
         cout << bad.what();
         cout << "Company: " << bad.label_val() << endl;
@@ -56,7 +67,7 @@ int main()
    {
         cout << bad.what();
         cout << "bad index: " << bad.bi_val() << endl;
-   }
+   }*/
    cout << "\nNext try block:\n";
    try
     {
@@ -64,7 +75,18 @@ int main()
         sales1[20] = 23345;
         cout << "End of try block 2.\n";
    }
-   catch(LabeledSales::nbad_index & bad)
+	catch(std::logic_error & ex)
+	{
+		cout << ex.what();
+		if (typeid(ex) == typeid(LabeledSales::nbad_index))
+		{
+			std::cout << "Company: " << dynamic_cast<LabeledSales::nbad_index&>(ex).label_val() << std::endl;
+			std::cout << "bad index: " << dynamic_cast<LabeledSales::nbad_index&>(ex).bi_val() << endl;
+		}
+		else
+			std::cout << "bad index: " << dynamic_cast<Sales::bad_index&>(ex).bi_val() << endl;
+	}
+   /*catch(LabeledSales::nbad_index & bad)
    {
         cout << bad.what();
         cout << "Company: " << bad.label_val() << endl;
@@ -74,7 +96,7 @@ int main()
    {
         cout << bad.what();
         cout << "bad index: " << bad.bi_val() << endl;
-   }
+   }*/
    cout << "done\n";
    // std::cin.get();
    return 0;

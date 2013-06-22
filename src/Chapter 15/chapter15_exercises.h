@@ -10,5 +10,6 @@ extern void ch15ex3(void);
 extern void ch15ex4(void);
 
 extern int error4(void);
+extern int use_sales(void);
 
 #endif
