@@ -6,6 +6,9 @@
 #include <vector>
 #include <iterator>
 #include <fstream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime>   // for time()
+#include <queue>
 
 extern void ch16ex1(void);
 extern void ch16ex2(void);
