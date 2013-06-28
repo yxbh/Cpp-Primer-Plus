@@ -1,5 +1,11 @@
 #ifndef _CHAPTER16_EXERCISES_H_
 #define _CHAPTER16_EXERCISES_H_
+#include <string>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <iterator>
+#include <fstream>
 
 extern void ch16ex1(void);
 extern void ch16ex2(void);

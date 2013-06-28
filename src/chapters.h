@@ -30,5 +30,14 @@
 #include "Chapter 15\chapter15_review.h"
 #include "Chapter 15\chapter15_exercises.h"
 
+#include "Chapter 16\chapter16_review.h"
+#include "Chapter 16\chapter16_exercises.h"
+
+#include "Chapter 17\chapter17_review.h"
+#include "Chapter 17\chapter17_exercises.h"
+
+#include "Chapter 18\chapter18_review.h"
+#include "Chapter 18\chapter18_exercises.h"
+
 #endif
 

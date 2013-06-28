@@ -1,6 +1,6 @@
 #include "chapter16_exercises.h"
 
-void ch16ex1(void)
+void ch16ex6(void)
 {
 
 }
