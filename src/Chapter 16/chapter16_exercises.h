@@ -9,6 +9,11 @@
 #include <cstdlib> // for rand() and srand()
 #include <ctime>   // for time()
 #include <queue>
+#include <set>
+#include <random>
+#include <list>
+#include <chrono>
+#include <memory>
 
 extern void ch16ex1(void);
 extern void ch16ex2(void);
