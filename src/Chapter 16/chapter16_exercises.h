@@ -26,4 +26,16 @@ extern void ch16ex8(void);
 extern void ch16ex9(void);
 extern void ch16ex10(void);
 
+//ch16re2();
+	//ch16ex1();
+	//ch16ex2();
+	//ch16ex3();
+	//ch16ex4();
+	//ch16ex5();
+	//ch16ex6();
+	//ch16ex7();
+	//ch16ex8();
+	//ch16ex9();
+	//ch16ex10();
+
 #endif
