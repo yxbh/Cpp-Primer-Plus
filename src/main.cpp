@@ -1,28 +1,30 @@
 #include <iostream>
 #include <string>
-////#include "bh_lib.h"
 #include "bh_util.h"
 #include "chapters.h"
 using namespace std;
 using namespace bh_lib::console_util;
 
-namespace {
-	void welcome(void);
+namespace 
+{
+	void welcome();
 	void call_exit(void);
 }
 
 int main()
 {
-	welcome(); // Print welcome message
+	::welcome(); // Print welcome message
 
-	
+	//ch17re7();
+	//ch17ex1();
+	//ch17ex2();
+	//ch17ex3();
+	//ch17ex4();
+	//ch17ex5();
+	//ch17ex6();
+	ch17ex7();
 
-	//ch14ex1();
-	//ch14ex2();
-	//ch14ex3();
-	ch14ex4();
-
-	call_exit(); // exit msg and pause
+	::call_exit(); // exit msg and pause
 
 	return 0;
 }
