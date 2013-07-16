@@ -12,4 +12,12 @@ extern void ch17ex5(void);
 extern void ch17ex6(void);
 extern void ch17ex7(void);
 
+//ch17ex1();
+	//ch17ex2();
+	//ch17ex3();
+	//ch17ex4();
+	//ch17ex5();
+	//ch17ex6();
+	//ch17ex7();
+
 #endif
